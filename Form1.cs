@@ -15,13 +15,44 @@ namespace MatchLove
         Boys boyForm = new Boys();
         Girls girlForm = new Girls();
         Random randomize = new Random();
-        int input;
+        static int input;
+        public List<string> outcome { get; set; }
         public Form1()
         {
             InitializeComponent();
             this.Load += Form1_Load;
             this.ptr_boy.Click += Ptr_boy_Click;
             this.ptr_girl.Click += Ptr_girl_Click;
+            this.btn_main_result.Click += Btn_main_result_Click;
+            this.btn_main_reset.Click += Btn_main_reset_Click;
+        }
+
+        private void Btn_main_reset_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Reset?", "RESET", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                randomize.removeAll();
+                randomize.crearteGirlsArray();
+                randomize.createBoysArray();
+            }      
+        }
+
+        private void Btn_main_result_Click(object sender, EventArgs e)
+        {
+            //Outcome outcomeForm = new Outcome(outcome);
+            string result = "";
+            try {
+                foreach (string item in outcome)
+                {
+                    result += item + "\n";
+                }
+                MessageBox.Show(result, "Outcome");
+            }
+            catch
+            {
+                MessageBox.Show("null", "Outcome");
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,10 +74,12 @@ namespace MatchLove
                 else
                 {
                     randomize.removeRandom(randomize.girls, input);
-                    int rand = randomize.random(randomize.b);
-                    randomize.removeRandom(randomize.girls, rand);
+                    int rand = randomize.random(randomize.boys);
+                    randomize.removeRandom(randomize.boys, rand);
                     ResultDialog result = new ResultDialog(rand);
                     result.ShowDialog();
+                    randomize.outcome(input, rand);
+                    this.outcome = randomize.results;
                 }
             }
         }
@@ -68,6 +101,8 @@ namespace MatchLove
                     randomize.removeRandom(randomize.girls, rand);
                     ResultDialog result = new ResultDialog(rand);
                     result.ShowDialog();
+                    randomize.outcome(input, rand);
+                    this.outcome = randomize.results;
                 }
             }
         }

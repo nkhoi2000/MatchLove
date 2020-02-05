@@ -65,7 +65,7 @@
             this.lbl_result.AutoSize = true;
             this.lbl_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_result.ForeColor = System.Drawing.Color.Red;
-            this.lbl_result.Location = new System.Drawing.Point(113, 49);
+            this.lbl_result.Location = new System.Drawing.Point(143, 54);
             this.lbl_result.Name = "lbl_result";
             this.lbl_result.Size = new System.Drawing.Size(118, 42);
             this.lbl_result.TabIndex = 10;
@@ -80,7 +80,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_result);
             this.Name = "ResultDialog";
-            this.Text = "ResultDialog";
+            this.Text = "Result";
             this.ResumeLayout(false);
             this.PerformLayout();
 

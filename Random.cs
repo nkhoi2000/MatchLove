@@ -10,6 +10,7 @@ namespace MatchLove
     {
         public List<int> boys = new List<int>();
         public List<int> girls = new List<int>();
+        public List<string> results = new List<string>();
         public void createBoysArray()
         {
             
@@ -50,6 +51,19 @@ namespace MatchLove
                 return true;
             }
             return false;
+        }
+
+        public void outcome(int firstNumb, int secondNumb)
+        {
+            string tempStr = "" + firstNumb + " დ " + secondNumb + "\n";
+            results.Add(tempStr);
+        }
+        
+        public void removeAll()
+        {
+            girls.Clear();
+            boys.Clear();
+            results.Clear();
         }
     }
 }

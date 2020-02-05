@@ -51,7 +51,7 @@
             this.btn_boy_rand.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_boy_rand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btn_boy_rand.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_boy_rand.Location = new System.Drawing.Point(117, 133);
+            this.btn_boy_rand.Location = new System.Drawing.Point(116, 134);
             this.btn_boy_rand.Margin = new System.Windows.Forms.Padding(2);
             this.btn_boy_rand.Name = "btn_boy_rand";
             this.btn_boy_rand.Size = new System.Drawing.Size(131, 38);
@@ -62,6 +62,7 @@
             // txt_boy_number
             // 
             this.txt_boy_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.txt_boy_number.ForeColor = System.Drawing.Color.Red;
             this.txt_boy_number.Location = new System.Drawing.Point(143, 45);
             this.txt_boy_number.Margin = new System.Windows.Forms.Padding(2);
             this.txt_boy_number.MaximumSize = new System.Drawing.Size(500, 500);

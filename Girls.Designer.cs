@@ -51,7 +51,7 @@
             this.btn_girl_rand.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_girl_rand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btn_girl_rand.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_girl_rand.Location = new System.Drawing.Point(113, 133);
+            this.btn_girl_rand.Location = new System.Drawing.Point(111, 135);
             this.btn_girl_rand.Margin = new System.Windows.Forms.Padding(2);
             this.btn_girl_rand.Name = "btn_girl_rand";
             this.btn_girl_rand.Size = new System.Drawing.Size(131, 38);
@@ -62,6 +62,7 @@
             // txt_girl_number
             // 
             this.txt_girl_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.txt_girl_number.ForeColor = System.Drawing.Color.Red;
             this.txt_girl_number.Location = new System.Drawing.Point(138, 44);
             this.txt_girl_number.Margin = new System.Windows.Forms.Padding(2);
             this.txt_girl_number.MaximumSize = new System.Drawing.Size(500, 500);

@@ -12,10 +12,31 @@ namespace MatchLove
 {
     public partial class ResultDialog : Form
     {
-        public ResultDialog(int result)
+        private List<string> listResult;
+        public ResultDialog(List<string> result)
         {
             InitializeComponent();
-            this.lbl_result.Text = result.ToString();
+            this.listResult = result;
+            this.Load += ResultDialog_Load;
+
+        }
+
+        private void ResultDialog_Load(object sender, EventArgs e)
+        {
+            string result = "";
+            try
+            {
+
+                foreach (string item in listResult)
+                {
+                    result += item + "\n";
+                }
+                this.lbl_outcome.Text = result;
+            }
+            catch
+            {
+                this.lbl_outcome.Text = "null";
+            }
         }
     }
 }

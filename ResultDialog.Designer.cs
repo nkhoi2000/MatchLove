@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_result = new System.Windows.Forms.Label();
+            this.lbl_outcome = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_cancel
@@ -40,56 +39,42 @@
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_cancel.Location = new System.Drawing.Point(227, 109);
+            this.btn_cancel.Location = new System.Drawing.Point(159, 485);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(103, 28);
+            this.btn_cancel.Size = new System.Drawing.Size(70, 28);
             this.btn_cancel.TabIndex = 12;
             this.btn_cancel.Text = "Ok";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lbl_outcome
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(61, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 45);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Con số của bạn là : ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_result
-            // 
-            this.lbl_result.AutoSize = true;
-            this.lbl_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result.ForeColor = System.Drawing.Color.Red;
-            this.lbl_result.Location = new System.Drawing.Point(143, 54);
-            this.lbl_result.Name = "lbl_result";
-            this.lbl_result.Size = new System.Drawing.Size(118, 42);
-            this.lbl_result.TabIndex = 10;
-            this.lbl_result.Text = "label1";
+            this.lbl_outcome.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_outcome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_outcome.Location = new System.Drawing.Point(11, 9);
+            this.lbl_outcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_outcome.Name = "lbl_outcome";
+            this.lbl_outcome.Size = new System.Drawing.Size(161, 462);
+            this.lbl_outcome.TabIndex = 11;
+            this.lbl_outcome.Text = "results";
+            this.lbl_outcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ResultDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 146);
+            this.ClientSize = new System.Drawing.Size(240, 524);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbl_result);
+            this.Controls.Add(this.lbl_outcome);
             this.Name = "ResultDialog";
             this.Text = "Result";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_result;
+        private System.Windows.Forms.Label lbl_outcome;
     }
 }

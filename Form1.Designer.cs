@@ -29,37 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_ = new System.Windows.Forms.Label();
             this.ptr_girl = new System.Windows.Forms.PictureBox();
             this.ptr_boy = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btn_main_result = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_main_reset = new System.Windows.Forms.ToolStripMenuItem();
+            this.txt_girl = new System.Windows.Forms.TextBox();
+            this.txt_boy = new System.Windows.Forms.TextBox();
+            this.btn_random = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptr_girl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptr_boy)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // btn_
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(282, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 31);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "♥";
+            this.btn_.AutoSize = true;
+            this.btn_.BackColor = System.Drawing.Color.Transparent;
+            this.btn_.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_.ForeColor = System.Drawing.Color.Firebrick;
+            this.btn_.Location = new System.Drawing.Point(282, 190);
+            this.btn_.Name = "btn_";
+            this.btn_.Size = new System.Drawing.Size(46, 31);
+            this.btn_.TabIndex = 7;
+            this.btn_.Text = "♥";
             // 
             // ptr_girl
             // 
             this.ptr_girl.Image = ((System.Drawing.Image)(resources.GetObject("ptr_girl.Image")));
             this.ptr_girl.ImageLocation = "";
-            this.ptr_girl.Location = new System.Drawing.Point(365, 86);
+            this.ptr_girl.Location = new System.Drawing.Point(371, 95);
             this.ptr_girl.Name = "ptr_girl";
-            this.ptr_girl.Size = new System.Drawing.Size(163, 232);
+            this.ptr_girl.Size = new System.Drawing.Size(151, 223);
             this.ptr_girl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptr_girl.TabIndex = 6;
             this.ptr_girl.TabStop = false;
@@ -110,12 +113,61 @@
             this.btn_main_reset.Size = new System.Drawing.Size(47, 20);
             this.btn_main_reset.Text = "Reset";
             // 
+            // txt_girl
+            // 
+            this.txt_girl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_girl.ForeColor = System.Drawing.Color.Silver;
+            this.txt_girl.Location = new System.Drawing.Point(407, 335);
+            this.txt_girl.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_girl.MaximumSize = new System.Drawing.Size(500, 500);
+            this.txt_girl.Name = "txt_girl";
+            this.txt_girl.Size = new System.Drawing.Size(77, 35);
+            this.txt_girl.TabIndex = 13;
+            this.txt_girl.Text = "Girl";
+            this.txt_girl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_girl.Enter += new System.EventHandler(this.txt_girl_Enter);
+            this.txt_girl.Leave += new System.EventHandler(this.txt_girl_Leave);
+            // 
+            // txt_boy
+            // 
+            this.txt_boy.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_boy.ForeColor = System.Drawing.Color.Silver;
+            this.txt_boy.Location = new System.Drawing.Point(109, 335);
+            this.txt_boy.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_boy.MaximumSize = new System.Drawing.Size(500, 500);
+            this.txt_boy.Name = "txt_boy";
+            this.txt_boy.Size = new System.Drawing.Size(100, 35);
+            this.txt_boy.TabIndex = 13;
+            this.txt_boy.Tag = "";
+            this.txt_boy.Text = "Boy";
+            this.txt_boy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_boy.Enter += new System.EventHandler(this.txt_boy_Enter);
+            this.txt_boy.Leave += new System.EventHandler(this.txt_boy_Leave);
+            // 
+            // btn_random
+            // 
+            this.btn_random.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_random.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_random.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_random.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_random.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_random.Location = new System.Drawing.Point(253, 335);
+            this.btn_random.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_random.Name = "btn_random";
+            this.btn_random.Size = new System.Drawing.Size(103, 35);
+            this.btn_random.TabIndex = 14;
+            this.btn_random.Text = "Random";
+            this.btn_random.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 390);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(601, 421);
+            this.Controls.Add(this.btn_random);
+            this.Controls.Add(this.txt_boy);
+            this.Controls.Add(this.txt_girl);
+            this.Controls.Add(this.btn_);
             this.Controls.Add(this.ptr_girl);
             this.Controls.Add(this.ptr_boy);
             this.Controls.Add(this.label1);
@@ -134,13 +186,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label btn_;
         private System.Windows.Forms.PictureBox ptr_girl;
         private System.Windows.Forms.PictureBox ptr_boy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btn_main_result;
         private System.Windows.Forms.ToolStripMenuItem btn_main_reset;
+        private System.Windows.Forms.TextBox txt_girl;
+        private System.Windows.Forms.TextBox txt_boy;
+        private System.Windows.Forms.Button btn_random;
     }
 }
 
